@@ -2,10 +2,11 @@
 "use strict";
 
 const { create_ssr_component, escape } = require("svelte/internal");
+const { default: Child } = require("./Child.svelte");
 
 const css = {
 	code: "h1.svelte-1flcvpj{text-align:center;font-size:4em}",
-	map: "{\"version\":3,\"file\":null,\"sources\":[null],\"sourcesContent\":[\"<script>\\n  // import Child from \\\"./Child.svelte\\\";\\n  export let name = \\\"Russell\\\";\\n\\n  function handleClick() {\\n    name = \\\"Yeet\\\";\\n  }\\n</script>\\n\\n<style>\\n  h1 {\\n    text-align: center;\\n    font-size: 4em;\\n  }\\n</style>\\n\\n<h1 on:click={handleClick}>Hello {name}!</h1>\\n<!-- <Child /> -->\\n\"],\"names\":[],\"mappings\":\"AAUE,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,GAAG,AAChB,CAAC\"}"
+	map: "{\"version\":3,\"file\":null,\"sources\":[null],\"sourcesContent\":[\"<script>\\n  import Child from \\\"./Child.svelte\\\";\\n  export let name = \\\"Russell\\\";\\n\\n  function handleClick() {\\n    name = \\\"Yeet\\\";\\n  }\\n</script>\\n\\n<style>\\n  h1 {\\n    text-align: center;\\n    font-size: 4em;\\n  }\\n</style>\\n\\n<h1 on:click={handleClick}>Hello {name}!</h1>\\n<!-- <Child /> -->\\n\"],\"names\":[],\"mappings\":\"AAUE,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,GAAG,AAChB,CAAC\"}"
 };
 
 const Component = create_ssr_component(($$result, $$props, $$bindings, $$slots) => {

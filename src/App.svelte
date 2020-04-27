@@ -1,5 +1,5 @@
 <script>
-  // import Child from "./Child.svelte";
+  import Child from "./Child.svelte";
   export let name = "Russell";
 
   function handleClick() {
